@@ -17,7 +17,7 @@ function CardAdmin(props) {
     email,
     phone_number,
     logo_url,
-    deliteCard,
+    deleteCard,
     editingCard,
   } = props
 
@@ -80,7 +80,7 @@ function CardAdmin(props) {
           <img className="imgBtnAdmin" src={pencil} alt="" />
           <p>Изменить</p>
         </button>
-        <button className="btn_del" onClick={() => deliteCard(id)}>
+        <button className="btn_del" onClick={() => deleteCard(id)}>
           <img className="imgBtnAdmin" src={trash} alt="" />
           <p>Удалить</p>
         </button>

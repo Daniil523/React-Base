@@ -5,7 +5,7 @@ import './CardListAdmin.css'
 import plus from '../../images/fi_plus.svg'
 
 function CardListAdmin(props) {
-  const { editingCard, deliteCard, addCard, data, filter } = props
+  const { editingCard, deleteCard, addCard, data, filter } = props
   const [modalActive, setModalActive] = useState(false)
   function filterCard(data, filter) {
     let arrFilter = data.filter((item) => item.filter === filter)
@@ -29,22 +29,22 @@ function CardListAdmin(props) {
         email={item.email}
         phone_number={item.phone_number}
         logo_url={item.logo_url}
-        deliteCard={deliteCard}
+        deleteCard={deleteCard}
         editingCard={editingCard}
       />
     )
   })
   let dataFoAdd = {
     filter: filter,
-    value_brand_name: '',
-    value_card_description: '',
-    value_modal_description: '',
-    value_spec_ofer: '',
-    value_site_name: '',
-    value_duration: '',
-    value_email: '',
-    value_phone_number: '',
-    value_logo_url: '',
+    brand_name: '',
+    card_description: '',
+    modal_description: '',
+    spec_ofer: '',
+    site_name: '',
+    duration: '',
+    email: '',
+    phone_number: '',
+    logo_url: '',
   }
 
   return (
@@ -75,7 +75,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="text"
             onChange={(event) => {
-              dataFoAdd.value_brand_name = event.target.value
+              dataFoAdd.brand_name = event.target.value
             }}
             placeholder="Введите текст"
           />
@@ -84,7 +84,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="text"
             onChange={(event) => {
-              dataFoAdd.value_card_description = event.target.value
+              dataFoAdd.card_description = event.target.value
             }}
             placeholder="Введите текст для отображения на карточке"
           />
@@ -93,7 +93,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="text"
             onChange={(event) => {
-              dataFoAdd.value_spec_ofer = event.target.value
+              dataFoAdd.spec_ofer = event.target.value
             }}
             placeholder="Введите текст"
           />
@@ -102,7 +102,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="url"
             onChange={(event) => {
-              dataFoAdd.value_site_name = event.target.value
+              dataFoAdd.site_name = event.target.value
             }}
             placeholder="Введите URL"
           />
@@ -111,7 +111,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="text"
             onChange={(event) => {
-              dataFoAdd.value_duration = event.target.value
+              dataFoAdd.duration = event.target.value
             }}
             placeholder="Введите текст"
           />
@@ -120,7 +120,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="text"
             onChange={(event) => {
-              dataFoAdd.value_modal_description = event.target.value
+              dataFoAdd.modal_description = event.target.value
             }}
             placeholder="Введите текст"
           />
@@ -129,7 +129,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="email"
             onChange={(event) => {
-              dataFoAdd.value_email = event.target.value
+              dataFoAdd.email = event.target.value
             }}
             placeholder="Введите email"
           />
@@ -138,7 +138,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="tel"
             onChange={(event) => {
-              dataFoAdd.value_phone_number = event.target.value
+              dataFoAdd.phone_number = event.target.value
             }}
             placeholder="Введите phone"
           />
@@ -147,7 +147,7 @@ function CardListAdmin(props) {
             className="forClear Form__input"
             type="url"
             onChange={(event) => {
-              dataFoAdd.value_logo_url = event.target.value
+              dataFoAdd.logo_url = event.target.value
             }}
             placeholder="Введите URL"
           />

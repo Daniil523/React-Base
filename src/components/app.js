@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.changeFilter = this.changeFilter.bind(this)
-    this.deliteCard = this.deliteCard.bind(this)
+    this.deleteCard = this.deleteCard.bind(this)
     this.editingCard = this.editingCard.bind(this)
     this.addCard = this.addCard.bind(this)
     this.changeFilter = this.changeFilter.bind(this)
@@ -24,8 +24,8 @@ class App extends React.Component {
     this.setState({ filter: filter })
   }
 
-  deliteCard(id) {
-    this.dataAPI.deliteCard(id)
+  deleteCard(id) {
+    this.dataAPI.deleteCard(id)
     this.setState(({ data }) => {
       return {
         data: this.dataAPI.data,
@@ -69,7 +69,7 @@ class App extends React.Component {
             element={
               <Admin
                 editingCard={this.editingCard}
-                deliteCard={this.deliteCard}
+                deleteCard={this.deleteCard}
                 addCard={this.addCard}
                 data={this.state.data}
                 filter={this.state.filter}

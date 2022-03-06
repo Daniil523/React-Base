@@ -1,5 +1,5 @@
 class dataAPI {
-  deliteCard(id) {
+  deleteCard(id) {
     this.data = this.data.filter((el) => el.id !== id)
   }
   editingCard(dataForEditing, id) {
@@ -18,21 +18,11 @@ class dataAPI {
     }
   }
   addCard(dataForAdd) {
-    this.data.push({
-      id: this.dataCounter,
-      filter: dataForAdd.filter,
-      brand_name: dataForAdd.value_brand_name,
-      card_description: dataForAdd.value_card_description,
-      modal_description: dataForAdd.value_modal_description,
-      spec_ofer: dataForAdd.value_spec_ofer,
-      site_name: dataForAdd.value_site_name,
-      duration: dataForAdd.value_duration,
-      email: dataForAdd.value_email,
-      phone_number: dataForAdd.value_phone_number,
-      logo_url: dataForAdd.value_logo_url,
-    })
+    this.data.push({ ...dataForAdd, id: this.dataCounter })
     this.dataCounter++
+    console.log(this.data)
   }
+
   dataCounter = 11
   data = [
     {
