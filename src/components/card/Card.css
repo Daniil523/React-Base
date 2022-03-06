@@ -1,0 +1,72 @@
+.Card {
+  background: #ffffff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  width: 350px;
+  padding: 25px;
+  margin: 0 30px 30px 0;
+  transition: 0.3s;
+}
+.Card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.Card__logo_url {
+  display: inline-block;
+  height: 70%;
+}
+.Card__logo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: #f2f2f2;
+  border-radius: 6px;
+}
+.Card__btn {
+  font-size: 14px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  margin-top: 15px;
+  border: #f2f2f2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.Card__brand_name {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 15px;
+}
+.Card__card_description {
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 15px;
+}
+.Card__spec_ofer {
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 15px;
+}
+
+.Form__input {
+  padding-left: 10px;
+  font-size: 14px;
+  height: 37px;
+  width: 100%;
+  background: #f9f9f9;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.Form__input::placeholder {
+  color: #b1b1b1;
+}
