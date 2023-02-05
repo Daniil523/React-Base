@@ -14,10 +14,11 @@
 }
 
 .Modal__content {
-  padding: 20px 25px;
+  margin: 10px;
+  padding: 20px 25px 60px 25px;
   border-radius: 10px;
   background-color: #fff;
-  width: 50vw;
+  max-width: 1000px;
   transform: scale(0);
   transition: 0.4s all;
 }

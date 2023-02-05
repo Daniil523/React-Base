@@ -6,8 +6,10 @@ import { ReactComponent as Heart } from '../../images/heart.svg'
 import { ReactComponent as Film } from '../../images/film.svg'
 import { ReactComponent as Retro } from '../../images/retro.svg'
 import { ReactComponent as Circle } from '../../images/circle.svg'
+import {useState} from "react";
 function CardFilter(props) {
   const { changeFilter, filter } = props
+  const [isAdmin, setIsAdmin] = useState(false)
   return (
     <div className="CardFilter">
       <button
@@ -76,12 +78,16 @@ function CardFilter(props) {
         <Circle className="imgBtn" />
         <p className="textBtn">Разное</p>
       </button>
-      <Link to="/" className="CardFilter__btn">
-        Главная страница
-      </Link>
-      <Link to="/admin" className="CardFilter__btn">
-        Админ панель
-      </Link>
+        {
+            window.location.pathname === '/admin' ?
+                <Link to="/" className="CardFilter__btn">
+                    Просмотр
+                </Link>
+                :
+                <Link to="/admin" className="CardFilter__btn">
+                    Редактирование
+                </Link>
+        }
     </div>
   )
 }
